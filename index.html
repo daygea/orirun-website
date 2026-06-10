@@ -1,353 +1,571 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Primary Meta Tags -->
-<title>Orirun – African Heritage, Culture Preservation & Community Development NGO</title>
-<meta name="title" content="Orirun – African Heritage, Culture Preservation & Community Development NGO">
-<meta name="description" content="Orirun is a non-profit organization dedicated to preserving African heritage, promoting traditional knowledge, supporting community development, and empowering future generations through culture, innovation, and education.">
-
-<meta name="keywords" content="Orirun, African NGO, African heritage, Ifa divination, Yoruba culture, African traditional knowledge, cultural preservation, community development, sustainability, African spirituality, indigenous wisdom, empowerment NGO, youth development Africa">
-
-<meta name="author" content="Orirun Organization">
-<meta name="robots" content="index, follow">
-<meta name="revisit-after" content="7 days">
+<head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orírùn Cultural Foundation — Keeping Ancestral Wisdom Alive</title>
+<meta name="description" content="Orírùn Cultural Foundation preserves and shares the living heritage of Ifá and Yorùbá spirituality — free for everyone, everywhere, in 22 languages. Support our work.">
 
-<!-- Open Graph / Facebook -->
+<!-- Open Graph -->
+<meta property="og:title" content="Orírùn Cultural Foundation">
+<meta property="og:description" content="Preserving the living heritage of Ifá and Yorùbá spirituality — free for everyone, in 22 languages.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://orirun.org/">
-<meta property="og:title" content="Orirun – Preserving African Heritage & Empowering Communities">
-<meta property="og:description" content="Orirun is an African NGO working to protect indigenous knowledge, support cultural education, and advance community development through innovation.">
-<meta property="og:image" content="https://orirun.org/public/img/logo.png">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://orirun.org/">
-<meta name="twitter:title" content="Orirun – African Heritage & Community Development Organization">
-<meta name="twitter:description" content="Orirun is committed to preserving African culture, promoting traditional knowledge, and empowering communities across Africa.">
-<meta name="twitter:image" content="https://orirun.org/public/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- Schema.org (Organization) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NonprofitOrganization",
-  "name": "Orirun",
-  "url": "https://orirun.org",
-  "logo": "https://orirun.org/public/img/logo.png",
-  "description": "Orirun is a non-profit organization dedicated to preserving African heritage, promoting traditional knowledge, and supporting sustainable community development.",
-  "foundingDate": "2025",
-  "areaServed": "Africa",
-  "sameAs": [
-    "https://facebook.com/orirunng/",
-    "https://www.instagram.com/orirun_ng/",
-    "https://twitter.com/orirun_ng/"
-  ]
-}
+<style>
+  :root{
+    --green:#0f7b3d;
+    --green-deep:#0a5a2c;
+    --green-ink:#082015;        /* darkest — hero / dark sections */
+    --green-ink-2:#0c3a25;
+    --gold:#c9a227;
+    --gold-soft:#e6cf8a;        /* legible gold on dark */
+    --cream:#f6f1e6;            /* iyèròsùn powder */
+    --cream-2:#efe6d3;
+    --paper:#fffdf9;
+    --ink:#222a24;
+    --ink-soft:#5c6a60;
+    --line:rgba(20,40,30,.14);
+    --line-gold:rgba(201,162,39,.45);
+    --display:'Fraunces',Georgia,'Times New Roman',serif;
+    --body:'Source Sans 3',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    --maxw:1140px;
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:var(--body);
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.08;margin:0;letter-spacing:-.01em;}
+  p{margin:0;}
+  a{color:inherit;}
+  img,svg{display:block;max-width:100%;}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  .eyebrow{
+    font-family:var(--body);font-weight:700;font-size:12.5px;
+    text-transform:uppercase;letter-spacing:.18em;color:var(--gold);
+    margin:0 0 18px;display:flex;align-items:center;gap:12px;
+  }
+  .eyebrow::before{content:"";width:26px;height:1.5px;background:var(--gold);display:inline-block;}
+  .eyebrow.center{justify-content:center;}
+
+  /* ── Odù mark signature (Èjì Ogbè — the senior sign) ── */
+  .odu{color:var(--gold);flex-shrink:0;}
+  .odu rect{fill:currentColor;}
+
+  a.skip{position:absolute;left:-999px;top:0;background:var(--gold);color:#000;padding:10px 16px;z-index:200;border-radius:0 0 8px 0;}
+  a.skip:focus{left:0;}
+
+  :focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:3px;}
+
+  /* ── Buttons ── */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:9px;
+    font-family:var(--body);font-weight:600;font-size:16px;
+    padding:14px 26px;border-radius:999px;text-decoration:none;cursor:pointer;
+    border:1.5px solid transparent;transition:transform .18s var(--ease),background .18s,color .18s,box-shadow .18s;
+    white-space:nowrap;
+  }
+  .btn-gold{background:var(--gold);color:#1c1605;box-shadow:0 6px 22px rgba(201,162,39,.28);}
+  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(201,162,39,.4);}
+  .btn-green{background:var(--green);color:#fff;}
+  .btn-green:hover{transform:translateY(-2px);background:var(--green-deep);}
+  .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.5);}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold-soft);}
+  .btn-ghost-dark{background:transparent;color:var(--green-deep);border-color:var(--line);}
+  .btn-ghost-dark:hover{border-color:var(--green);color:var(--green);}
+
+  /* ── Header ── */
+  header.site{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    transition:background .3s var(--ease),box-shadow .3s,border-color .3s;
+    border-bottom:1px solid transparent;
+  }
+  header.site .bar{display:flex;align-items:center;justify-content:space-between;height:74px;}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff;transition:color .3s;}
+  .brand .odu{width:17px;height:36px;}
+  .brand b{font-family:var(--display);font-weight:600;font-size:21px;letter-spacing:.01em;line-height:1;}
+  .brand small{display:block;font-family:var(--body);font-weight:600;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;opacity:.7;margin-top:3px;}
+  nav.main{display:flex;align-items:center;gap:30px;}
+  nav.main a.lnk{color:#fff;text-decoration:none;font-weight:600;font-size:15px;opacity:.9;transition:opacity .2s,color .2s;}
+  nav.main a.lnk:hover{opacity:1;color:var(--gold-soft);}
+  header.site .btn{padding:10px 20px;font-size:14.5px;}
+
+  /* scrolled state */
+  header.site.solid{background:rgba(255,253,249,.92);backdrop-filter:blur(10px);border-color:var(--line);box-shadow:0 2px 20px rgba(10,40,25,.06);}
+  header.site.solid .brand{color:var(--green-ink);}
+  header.site.solid nav.main a.lnk{color:var(--green-ink);}
+  header.site.solid .brand small{opacity:.55;}
+
+  .navtoggle{display:none;background:none;border:0;cursor:pointer;padding:8px;width:44px;height:44px;}
+  .navtoggle span{display:block;height:2px;background:#fff;border-radius:2px;margin:5px 0;transition:.25s;}
+  header.site.solid .navtoggle span{background:var(--green-ink);}
+
+  /* ── Hero ── */
+  .hero{
+    position:relative;color:#fff;overflow:hidden;
+    background:radial-gradient(120% 90% at 80% -10%, #114a30 0%, var(--green-ink) 55%, #061a11 100%);
+    padding:150px 0 110px;
+  }
+  .hero::after{ /* faint gold grain at base */
+    content:"";position:absolute;inset:auto 0 0 0;height:160px;
+    background:linear-gradient(transparent, rgba(201,162,39,.05));pointer-events:none;
+  }
+  .hero .wrap{position:relative;display:grid;grid-template-columns:1fr auto;gap:50px;align-items:center;}
+  .hero-copy{max-width:660px;}
+  .hero h1{
+    font-size:clamp(2.5rem,6vw,4.55rem);font-weight:500;letter-spacing:-.02em;
+    margin:0 0 24px;
+  }
+  .hero h1 em{font-style:italic;color:var(--gold-soft);}
+  .hero .lead{font-size:clamp(1.05rem,1.7vw,1.3rem);color:rgba(255,255,255,.82);max-width:580px;margin:0 0 36px;}
+  .hero .cta-row{display:flex;flex-wrap:wrap;gap:14px;}
+  .hero-odu{width:120px;height:262px;opacity:.9;}
+  .hero-odu .glow{filter:drop-shadow(0 0 18px rgba(201,162,39,.35));}
+
+  /* homage ribbon under hero copy */
+  .homage{
+    margin-top:42px;padding-top:22px;border-top:1px solid rgba(230,207,138,.28);
+    font-family:var(--display);font-style:italic;font-size:1.06rem;color:var(--gold-soft);max-width:560px;
+  }
+
+  /* ── Section scaffolding ── */
+  section{padding:96px 0;}
+  .section-head{max-width:720px;margin:0 0 56px;}
+  .section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
+  .section-head h2{font-size:clamp(2rem,4vw,3rem);color:var(--green-ink);margin:0 0 18px;}
+  .section-head p{font-size:1.12rem;color:var(--ink-soft);}
+
+  /* ── Mission (cream) ── */
+  .mission{background:var(--cream);border-top:1px solid var(--line-gold);border-bottom:1px solid var(--line-gold);}
+  .mission .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:start;}
+  .mission blockquote{
+    margin:0;font-family:var(--display);font-weight:400;
+    font-size:clamp(1.5rem,3vw,2.15rem);line-height:1.32;color:var(--green-ink);letter-spacing:-.01em;
+  }
+  .mission blockquote .gold{color:var(--gold);font-style:italic;}
+  .mission .aside p{color:var(--ink-soft);font-size:1.05rem;margin-bottom:18px;}
+  .mission .aside p:last-child{margin-bottom:0;}
+
+  /* ── Programs ── */
+  .programs .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;}
+  .card{
+    background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:34px 32px;
+    transition:transform .25s var(--ease),box-shadow .25s,border-color .25s;
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:0 18px 44px rgba(10,40,25,.09);border-color:var(--line-gold);}
+  .card .mk{display:flex;align-items:center;gap:14px;margin-bottom:18px;}
+  .card .mk .odu{width:13px;height:30px;}
+  .card .mk span{font-family:var(--body);font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);}
+  .card h3{font-size:1.5rem;color:var(--green-ink);margin:0 0 12px;}
+  .card p{color:var(--ink-soft);font-size:1.02rem;}
+
+  /* ── Values strip (dark) ── */
+  .values{background:var(--green-ink);color:#fff;}
+  .values .row{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .stat{padding:8px 10px;border-left:1px solid rgba(230,207,138,.3);}
+  .stat b{display:block;font-family:var(--display);font-weight:500;font-size:clamp(2rem,3.2vw,2.7rem);color:var(--gold-soft);line-height:1;margin-bottom:10px;}
+  .stat span{color:rgba(255,255,255,.78);font-size:1rem;}
+
+  /* ── App showcase ── */
+  .app .grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+  .app .lead{color:var(--ink-soft);font-size:1.12rem;margin:0 0 28px;}
+  .feat-list{list-style:none;margin:0 0 30px;padding:0;display:grid;gap:13px;}
+  .feat-list li{display:flex;gap:13px;align-items:flex-start;font-size:1.04rem;color:var(--ink);}
+  .feat-list li::before{content:"";flex-shrink:0;width:9px;height:9px;margin-top:9px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(201,162,39,.16);}
+  .badges{display:flex;flex-wrap:wrap;gap:12px;}
+  .store-badge{
+    display:inline-flex;align-items:center;gap:10px;background:#0a1410;color:#fff;
+    text-decoration:none;padding:11px 18px;border-radius:12px;border:1px solid rgba(255,255,255,.08);
+    transition:transform .18s var(--ease),box-shadow .18s;
+  }
+  .store-badge:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(10,40,25,.18);}
+  .store-badge svg{width:24px;height:24px;fill:#fff;flex-shrink:0;}
+  .store-badge span{display:flex;flex-direction:column;line-height:1.15;text-align:left;}
+  .store-badge small{font-size:9.5px;text-transform:uppercase;letter-spacing:.05em;opacity:.85;}
+  .store-badge strong{font-size:15px;font-weight:600;}
+  .weblink{display:inline-block;margin-top:18px;color:var(--green-deep);font-weight:600;text-decoration:none;border-bottom:2px solid var(--line-gold);padding-bottom:2px;}
+  .weblink:hover{border-color:var(--gold);}
+
+  /* app visual — framed Odù tray */
+  .tray{
+    aspect-ratio:1/1;border-radius:24px;position:relative;overflow:hidden;
+    background:radial-gradient(120% 120% at 30% 20%, #135234, var(--green-ink));
+    border:1px solid var(--line-gold);box-shadow:0 30px 70px rgba(8,32,21,.28);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .tray::before{content:"";position:absolute;inset:18px;border:1px solid rgba(230,207,138,.25);border-radius:18px;}
+  .tray .odu{width:160px;height:340px;opacity:.92;}
+  .tray figcaption{
+    position:absolute;left:0;right:0;bottom:22px;text-align:center;color:var(--gold-soft);
+    font-family:var(--display);font-style:italic;font-size:1.05rem;
+  }
+
+  /* ── Donate ── */
+  .donate{
+    background:radial-gradient(110% 120% at 15% 0%, var(--green-deep), var(--green-ink) 70%);
+    color:#fff;position:relative;overflow:hidden;
+  }
+  .donate::before{
+    content:"";position:absolute;top:-40px;right:-30px;width:280px;height:280px;
+    background:radial-gradient(circle, rgba(201,162,39,.16), transparent 70%);pointer-events:none;
+  }
+  .donate .grid{display:grid;grid-template-columns:1fr .9fr;gap:60px;align-items:center;position:relative;}
+  .donate h2{font-size:clamp(2.1rem,4vw,3.1rem);margin:0 0 20px;}
+  .donate h2 em{font-style:italic;color:var(--gold-soft);}
+  .donate .lead{color:rgba(255,255,255,.82);font-size:1.14rem;margin:0 0 30px;max-width:520px;}
+  .give-list{list-style:none;margin:0;padding:0;display:grid;gap:16px;}
+  .give-list li{display:flex;gap:15px;align-items:flex-start;}
+  .give-list .odu{width:11px;height:26px;margin-top:3px;}
+  .give-list b{display:block;font-size:1.06rem;color:#fff;font-weight:600;}
+  .give-list span{color:rgba(255,255,255,.7);font-size:.99rem;}
+  .give-card{
+    background:rgba(255,253,249,.06);border:1px solid rgba(230,207,138,.3);border-radius:22px;
+    padding:38px 34px;text-align:center;backdrop-filter:blur(4px);
+  }
+  .give-card .k{font-family:var(--body);font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:14px;}
+  .give-card h3{font-size:1.7rem;color:#fff;margin:0 0 10px;}
+  .give-card p{color:rgba(255,255,255,.72);font-size:1rem;margin:0 0 26px;}
+  .give-card .btn{width:100%;font-size:17px;padding:16px 26px;}
+  .give-card .secure{margin-top:16px;font-size:13px;color:rgba(255,255,255,.55);display:flex;align-items:center;justify-content:center;gap:7px;}
+  .give-card .secure svg{width:14px;height:14px;fill:var(--gold-soft);}
+
+  /* ── Acknowledgements ── */
+  .ack{background:var(--cream);border-top:1px solid var(--line-gold);text-align:center;}
+  .ack .wrap{max-width:780px;}
+  .ack .odu{width:14px;height:32px;margin:0 auto 24px;}
+  .ack p{font-family:var(--display);font-size:clamp(1.2rem,2.4vw,1.6rem);line-height:1.5;color:var(--green-ink);font-style:italic;}
+  .ack .partners{margin-top:26px;font-family:var(--body);font-style:normal;font-size:1rem;color:var(--ink-soft);}
+  .ack .partners b{color:var(--green-deep);font-weight:600;}
+
+  /* ── Footer ── */
+  footer.site{background:var(--green-ink);color:rgba(255,255,255,.8);padding:70px 0 34px;}
+  footer.site .top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:42px;border-bottom:1px solid rgba(255,255,255,.1);}
+  footer.site .brand{color:#fff;margin-bottom:16px;}
+  footer.site .blurb{font-size:1rem;color:rgba(255,255,255,.66);max-width:320px;}
+  footer.site h4{font-family:var(--body);font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-soft);margin:0 0 18px;}
+  footer.site ul{list-style:none;margin:0;padding:0;display:grid;gap:11px;}
+  footer.site a{color:rgba(255,255,255,.8);text-decoration:none;transition:color .2s;}
+  footer.site a:hover{color:var(--gold-soft);}
+  .socials{display:flex;gap:12px;margin-top:18px;}
+  .socials a{width:40px;height:40px;border:1px solid rgba(255,255,255,.18);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:.2s;}
+  .socials a:hover{border-color:var(--gold);background:rgba(201,162,39,.12);}
+  .socials svg{width:17px;height:17px;fill:rgba(255,255,255,.85);}
+  footer.site .legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:26px;font-size:13.5px;color:rgba(255,255,255,.5);}
+
+  /* ── Reveal animation ── */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* ── Responsive ── */
+  @media (max-width:920px){
+    .hero .wrap{grid-template-columns:1fr;}
+    .hero-odu{display:none;}
+    .mission .grid,.app .grid,.donate .grid{grid-template-columns:1fr;gap:40px;}
+    .values .row{grid-template-columns:repeat(2,1fr);gap:26px;}
+    footer.site .top{grid-template-columns:1fr 1fr;}
+    footer.site .top .about{grid-column:1/-1;}
+  }
+  @media (max-width:680px){
+    nav.main{
+      position:fixed;inset:74px 0 auto 0;background:var(--green-ink);
+      flex-direction:column;align-items:stretch;gap:0;padding:10px 24px 24px;
+      transform:translateY(-130%);transition:transform .3s var(--ease);
+      border-bottom:1px solid rgba(255,255,255,.1);
+    }
+    nav.main.open{transform:none;}
+    nav.main a.lnk{color:#fff!important;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08);}
+    nav.main .btn{margin-top:14px;}
+    .navtoggle{display:block;}
+    .programs .grid{grid-template-columns:1fr;}
+    section{padding:70px 0;}
+    .hero{padding:122px 0 80px;}
+    .values .row{grid-template-columns:1fr 1fr;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{scroll-behavior:auto!important;}
+    .reveal{opacity:1;transform:none;transition:none;}
+    .btn,.card,.store-badge{transition:none;}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Reusable Odù symbol (Èjì Ogbè — the senior sign: eight single marks) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="odu" viewBox="0 0 64 140">
+    <rect x="14" y="6"   width="8" height="24" rx="4"/><rect x="42" y="6"   width="8" height="24" rx="4"/>
+    <rect x="14" y="42"  width="8" height="24" rx="4"/><rect x="42" y="42"  width="8" height="24" rx="4"/>
+    <rect x="14" y="78"  width="8" height="24" rx="4"/><rect x="42" y="78"  width="8" height="24" rx="4"/>
+    <rect x="14" y="114" width="8" height="24" rx="4"/><rect x="42" y="114" width="8" height="24" rx="4"/>
+  </symbol>
+</svg>
+
+<header class="site" id="hdr">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Orírùn Cultural Foundation — home">
+      <svg class="odu" aria-hidden="true"><use href="#odu"></use></svg>
+      <span><b>Orírùn</b><small>Cultural Foundation</small></span>
+    </a>
+    <nav class="main" id="nav">
+      <a class="lnk" href="#mission">Mission</a>
+      <a class="lnk" href="#work">What We Do</a>
+      <a class="lnk" href="#app">The App</a>
+      <a class="lnk" href="#support">Support</a>
+      <a class="btn btn-gold" href="https://paystack.shop/pay/orirun" target="_blank" rel="noopener">Donate</a>
+    </nav>
+    <button class="navtoggle" id="navtoggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<a id="top"></a>
+
+<!-- ───────── Hero ───────── -->
+<section class="hero" style="padding-top:150px">
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="eyebrow" style="color:var(--gold-soft)">Orírùn Cultural Foundation</p>
+      <h1>Keeping ancestral wisdom alive — and within <em>everyone's</em> reach.</h1>
+      <p class="lead">We preserve and share the living heritage of Ifá, Yorùbá spirituality, and traditional medicine — and we keep it free for everyone, everywhere, in 22 languages.</p>
+      <div class="cta-row">
+        <a class="btn btn-gold" href="https://paystack.shop/pay/orirun" target="_blank" rel="noopener">Donate to the work</a>
+        <a class="btn btn-ghost" href="#app">Explore the app</a>
+      </div>
+      <p class="homage">Àború, Àboyè. We pay homage to Olódùmarè, to Òrúnmìlà, and to the elders who carry the wisdom.</p>
+    </div>
+    <svg class="hero-odu glow" aria-hidden="true"><use href="#odu"></use></svg>
+  </div>
+</section>
+
+<!-- ───────── Mission ───────── -->
+<section class="mission" id="mission">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Who we are</p>
+    </div>
+    <div class="grid">
+      <blockquote class="reveal">
+        Ifá is one of humanity's oldest libraries of knowledge — a vast body of verse, ethics, and cosmology, recognised by <span class="gold">UNESCO</span> as a masterpiece of intangible heritage. For generations it lived only in the memory of the Babaláwo. We are carrying it forward.
+      </blockquote>
+      <div class="aside reveal">
+        <p>Orírùn Cultural Foundation exists to document this heritage faithfully, translate it widely, and place it in the hands of a new generation — without cost and without barriers.</p>
+        <p>We work in the space where tradition meets technology: honouring the elders who hold the knowledge, and using modern tools to make sure it is never lost.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── What we do ───────── -->
+<section class="programs" id="work">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">What we do</p>
+      <h2>Four ways we keep the tradition living.</h2>
+    </div>
+    <div class="grid">
+      <article class="card reveal">
+        <div class="mk"><svg class="odu" aria-hidden="true"><use href="#odu"></use></svg><span>Programme 01</span></div>
+        <h3>The Orírùn app</h3>
+        <p>A free guide to Ifá divination, Yorùbá numerology, and daily guidance — no paywall, no ads, and nothing held back. The tradition, in your pocket.</p>
+      </article>
+      <article class="card reveal">
+        <div class="mk"><svg class="odu" aria-hidden="true"><use href="#odu"></use></svg><span>Programme 02</span></div>
+        <h3>Cultural preservation</h3>
+        <p>We work alongside Babaláwo, onísègùn, and scholars to record the Odù, the verses, the herbal formulas, and the practices accurately — protecting an oral heritage before it fades.</p>
+      </article>
+      <article class="card reveal">
+        <div class="mk"><svg class="odu" aria-hidden="true"><use href="#odu"></use></svg><span>Programme 03</span></div>
+        <h3>Translation &amp; access</h3>
+        <p>We make the wisdom readable across 22 languages, so that distance and language never stand between a person and their heritage.</p>
+      </article>
+      <article class="card reveal">
+        <div class="mk"><svg class="odu" aria-hidden="true"><use href="#odu"></use></svg><span>Programme 04</span></div>
+        <h3>Education &amp; community</h3>
+        <p>We help seekers and practitioners learn, connect, and carry the tradition forward — with respect for its depth and its lineage.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── Values strip ───────── -->
+<section class="values">
+  <div class="wrap">
+    <div class="row">
+      <div class="stat reveal"><b>Free</b><span>For everyone, always — no ads, no paywall</span></div>
+      <div class="stat reveal"><b>22</b><span>Languages, so heritage crosses every border</span></div>
+      <div class="stat reveal"><b>UNESCO</b><span>Ifá, recognised as world intangible heritage</span></div>
+      <div class="stat reveal"><b>Worldwide</b><span>On iPhone, Android, and the web</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── App showcase ───────── -->
+<section class="app" id="app">
+  <div class="wrap">
+    <div class="grid">
+      <div class="reveal">
+        <p class="eyebrow">The Orírùn app</p>
+        <h2 class="section-head" style="margin-bottom:20px">Carry the wisdom with you.</h2>
+        <p class="lead">Orírùn brings Ifá divination, Yorùbá numerology, and traditional herbal medicine into a calm, modern space — a place to reflect, learn, and heal.</p>
+        <ul class="feat-list">
+          <li>Ifá divination by Odù, with orientation and guidance toward ẹbọ and adimu</li>
+          <li>Yorùbá numerology — a birth chart from your name and date, or a reading from a chosen number</li>
+          <li>Herbal medicinal formulas rooted in Yorùbá traditional medicine</li>
+          <li>Daily guidance drawn from the tradition</li>
+          <li>A learning corner to explore the meaning behind the signs</li>
+          <li>Available in 22 languages, free for everyone</li>
+        </ul>
+        <div class="badges">
+          <a class="store-badge" href="https://apps.apple.com/ng/app/orirun/id6766106963" target="_blank" rel="noopener" aria-label="Download on the App Store">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
+            <span><small>Download on the</small><strong>App Store</strong></span>
+          </a>
+          <!-- Swap this href for the live Play Store listing when published -->
+          <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.orirun.app" target="_blank" rel="noopener" aria-label="Get it on Google Play">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>
+            <span><small>Get it on</small><strong>Google Play</strong></span>
+          </a>
+        </div>
+        <a class="weblink" href="https://orirun.org" target="_blank" rel="noopener">Or open it in your browser at orirun.org →</a>
+      </div>
+      <figure class="tray reveal" style="margin:0">
+        <svg class="odu" aria-hidden="true"><use href="#odu"></use></svg>
+        <figcaption>Èjì Ogbè — the first of the Odù</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── Donate ───────── -->
+<section class="donate" id="support">
+  <div class="wrap">
+    <div class="grid">
+      <div class="reveal">
+        <p class="eyebrow" style="color:var(--gold-soft)">Support the work</p>
+        <h2>Your gift keeps it <em>free.</em></h2>
+        <p class="lead">Orírùn charges nothing and shows no ads. Donations are what keep it that way — and what make the deeper work possible.</p>
+        <ul class="give-list">
+          <li><svg class="odu" aria-hidden="true"><use href="#odu"></use></svg><div><b>Keep it free for everyone</b><span>So that cost is never the reason someone can't reach their heritage.</span></div></li>
+          <li><svg class="odu" aria-hidden="true"><use href="#odu"></use></svg><div><b>Fund the next language</b><span>Every translation opens the tradition to a community that couldn't read it before.</span></div></li>
+          <li><svg class="odu" aria-hidden="true"><use href="#odu"></use></svg><div><b>Document and protect the verses</b><span>Supporting the patient work of recording Ifá with the elders who hold it.</span></div></li>
+        </ul>
+      </div>
+      <div class="give-card reveal">
+        <p class="k">Give today</p>
+        <h3>Become a patron of the tradition</h3>
+        <p>Any amount helps. Give once, or set up a recurring gift — securely, in seconds.</p>
+        <a class="btn btn-gold" href="https://paystack.shop/pay/orirun" target="_blank" rel="noopener">Donate via Paystack</a>
+        <p class="secure">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1 3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4zm0 10.9h7c-.5 4.1-3.3 7.8-7 8.9V12H5V6.3l7-3.1V11.9z"/></svg>
+          Secure payment handled by Paystack
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── Acknowledgements ───────── -->
+<section class="ack">
+  <div class="wrap">
+    <svg class="odu reveal" aria-hidden="true"><use href="#odu"></use></svg>
+    <p class="reveal">With gratitude to the Babaláwo whose teachings make this work possible, and to all the elders who keep the tradition alive.</p>
+    <p class="partners reveal">In partnership with <b>Dunad Solutions Limited</b> and the <b>Aminat Olanbiwoninu Kadri Foundation</b>.</p>
+  </div>
+</section>
+</main>
+
+<!-- ───────── Footer ───────── -->
+<footer class="site">
+  <div class="wrap">
+    <div class="top">
+      <div class="about">
+        <a class="brand" href="#top">
+          <svg class="odu" aria-hidden="true" style="width:17px;height:36px"><use href="#odu"></use></svg>
+          <span><b>Orírùn</b><small>Cultural Foundation</small></span>
+        </a>
+        <p class="blurb">Preserving and sharing the living heritage of Ifá and Yorùbá spirituality — free for everyone, in 22 languages.</p>
+        <div class="socials">
+          <!-- Replace the # links below with your live social profiles -->
+          <a href="https://wa.me/2348027573121" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.15a11.87 11.87 0 0 1-1.6-5.95C.15 5.34 5.5 0 12.06 0a11.82 11.82 0 0 1 8.42 3.49 11.82 11.82 0 0 1 3.48 8.42c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.7-1.45L.06 24zM6.6 20.13c1.68 1 3.28 1.6 5.4 1.6 5.44 0 9.88-4.43 9.88-9.87a9.85 9.85 0 0 0-9.86-9.88c-5.45 0-9.88 4.43-9.88 9.88 0 2.22.65 3.88 1.74 5.62L3 18.46l1.06-3.9 1.54 5.57zm10.3-5.78c-.07-.12-.27-.2-.57-.35-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.05.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 1.62c-3.15 0-3.52.01-4.76.07-1.15.05-1.77.24-2.19.4-.55.22-.94.47-1.35.88-.41.41-.66.8-.88 1.35-.16.42-.35 1.04-.4 2.19-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.05 1.15.24 1.77.4 2.19.22.55.47.94.88 1.35.41.41.8.66 1.35.88.42.16 1.04.35 2.19.4 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c1.15-.05 1.77-.24 2.19-.4.55-.22.94-.47 1.35-.88.41-.41.66-.8.88-1.35.16-.42.35-1.04.4-2.19.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.05-1.15-.24-1.77-.4-2.19a3.6 3.6 0 0 0-.88-1.35 3.6 3.6 0 0 0-1.35-.88c-.42-.16-1.04-.35-2.19-.4-1.24-.06-1.61-.07-4.76-.07zm0 2.76a5.46 5.46 0 1 1 0 10.92 5.46 5.46 0 0 1 0-10.92zm0 9a3.54 3.54 0 1 0 0-7.08 3.54 3.54 0 0 0 0 7.08zm6.95-9.22a1.28 1.28 0 1 1-2.55 0 1.28 1.28 0 0 1 2.55 0z"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.02 4.39 11.01 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.69.24 2.69.24v2.97h-1.52c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.08 24 18.09 24 12.07z"/></svg></a>
+          <a href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.46l8.6-9.83L0 1.15h7.59l5.24 6.93 6.07-6.93zm-1.29 19.5h2.04L6.49 3.24H4.3l13.31 17.41z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.07 0 12 0 12s0 3.93.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Foundation</h4>
+        <ul>
+          <li><a href="#mission">Our mission</a></li>
+          <li><a href="#work">What we do</a></li>
+          <li><a href="#app">The app</a></li>
+          <li><a href="https://paystack.shop/pay/orirun" target="_blank" rel="noopener">Donate</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:info@orirun.com">info@orirun.com</a></li>
+          <li><a href="tel:+2348027573121">+234 802 757 3121</a></li>
+          <li><a href="https://orirun.org" target="_blank" rel="noopener">orirun.org</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© 2026 Orírùn Cultural Foundation. All rights reserved.</span>
+      <span>Source of ancestral wisdom.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    /* Header solid-on-scroll */
+    var hdr = document.getElementById('hdr');
+    function onScroll(){ hdr.classList.toggle('solid', window.scrollY > 40); }
+    onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+    /* Mobile nav */
+    var tgl = document.getElementById('navtoggle'), nav = document.getElementById('nav');
+    tgl.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      tgl.setAttribute('aria-expanded', open ? 'true' : 'false');
+      tgl.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    nav.addEventListener('click', function(e){
+      if (e.target.closest('a')) { nav.classList.remove('open'); tgl.setAttribute('aria-expanded','false'); }
+    });
+
+    /* Scroll reveal */
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var items = document.querySelectorAll('.reveal');
+    if (reduce || !('IntersectionObserver' in window)) {
+      items.forEach(function(el){ el.classList.add('in'); });
+    } else {
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+        });
+      }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+      items.forEach(function(el){ io.observe(el); });
+    }
+  })();
 </script>
-
-	  <link rel="icon" href="img/favicon.png" type="image/png">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="google-site-verification" content="-r_KyaxypzmxlENugCTNtrYycU5qtIGOm7wqt3Yquqc" />
-    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700|Anton" rel="stylesheet">
-    
-
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
-
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-
-    <link rel="stylesheet" href="css/aos.css">
-
-    <link rel="stylesheet" href="css/style.css">
-    
-  </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-  
-  <div class="site-wrap"  id="home-section">
-
-    <div class="site-mobile-menu site-navbar-target">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
-        </div>
-      </div>
-      <div class="site-mobile-menu-body"></div>
-    </div>
-   
-      
-    <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
-
-      <div class="container">
-        <div class="row align-items-center position-relative">
-          
-            
-            <div class="site-logo">
-              <!-- <a href="index.html" class="text-black"><span class="text-primary"> ORIRUN </a> -->
-                <a href="index.html"><img src="img/logo.png" style="height: 70px;" /></a>
-            </div>
-            
-              <nav class="site-navigation text-center ml-auto" role="navigation">
-
-                <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-                  <li><a href="#home-section" class="nav-link">Home</a></li>
-                  <li><a href="#about-section" class="nav-link">About</a></li>
-                  <li><a href="#discover-section" class="nav-link">Projects</a></li>
-                  <li><a href="#contact-section" class="nav-link">Contact</a></li>
-                </ul>
-              </nav>
-          
-            
-
-          <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
-
-        </div>
-      </div>
-      
-    </header>
-    
-    <div class="owl-carousel slide-one-item">
-      <a href="#"><img src="img/banner2.jpg" alt="Image" class="img-fluid"></a>
-      <a href="#"><img src="img/banner2.jpg" alt="Image" class="img-fluid"></a>
-    </div>
-    
-    <div class="d-block d-md-flex intro-engage">
-      <div class="">
-        <h2>VISION</h2>
-        <p>To safeguard Africa's ancestral legacy, inspire cultural pride, and create pathways for future generations to thrive through heritage, knowledge, and innovation.</p>
-      </div>
-      <div>
-        <h2>MOTIVE</h2>
-        <p>We are dedicated to the preservation, promotion, and advancement of African ancestral wisdom, spirituality, and cultural heritage.</p>
-      </div>
-      <div>
-        <h2>MISSION</h2>
-        <p>To preserve and promote African ancestral wisdom, spirituality, and cultural heritage by integrating traditional knowledge with modern innovation for the empowerment, education, and advancement of communities across Africa and beyond.</p>
-      </div>
-    </div>
-
-    <div class="site-section bg-image overlay counter" style="background-image: url('images/overlay.jpg');" id="about-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-lg-6 mb-4">
-            <figure class="block-img-video-1" data-aos="fade">
-              <a href="https://www.youtube.com/watch?v=3Oa0CrEysn0" class="popup-vimeo">
-                <span class="icon"><span class="icon-play"></span></span>
-                <img src="img/egungun.webp" alt="Image" class="img-fluid">
-              </a>
-            </figure>
-          </div>
-          <div class="col-lg-5 ml-auto align-self-lg-center">
-            <h2 class="text-black mb-4 text-uppercase section-title">WHY WE DO WHAT WE DO?</h2>
-            <p class="text-black">At Orirun Cultural Foundation, we are driven by a simple purpose — to keep African culture alive and meaningful in today’s world. We work to preserve traditional knowledge, celebrate our heritage, and create opportunities for cultural education and growth.</p>
-            <p class="text-black">
-We do what we do because we see culture not as a relic of the past, but as a living force — one that guides our spirituality, shapes our community, and inspires creativity and progress.
-Through education, research, and cultural expression, we seek to revive indigenous knowledge systems, celebrate African spirituality, and empower people to reconnect with their roots.
-            </p>
-<p class="text-black">
-Every project, program, and partnership we undertake is a step toward reclaiming our stories, restoring cultural pride, and building a future grounded in authenticity and unity.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 mb-4 col-lg-0 col-lg-3">
-            <div class="block-counter-1">
-              <span class="number"><span data-number="5">0</span></span>
-              <span class="caption text-black">Number of Volunteers</span>
-            </div>
-          </div>
-          <div class="col-md-6 mb-4 col-lg-0 col-lg-3">
-            <div class="block-counter-1">
-              <span class="number"><span data-number="1">0</span></span>
-              <span class="caption text-black">Number of Projects</span>
-            </div>
-          </div>
-          <div class="col-md-6 mb-4 col-lg-0 col-lg-3">
-            <div class="block-counter-1">
-              <span class="number"><span data-number="2">0</span></span>
-              <span class="caption text-black">Number of Partners</span>
-            </div>
-          </div>
-          <div class="col-md-6 mb-4 col-lg-0 col-lg-3">
-            <div class="block-counter-1">
-              <span class="number"><span data-number="15">0</span></span>
-              <span class="caption text-black">Number of Donations</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="site-section bg-light counter" id="discover-section">
-      <div class="container">
-        <div class="row mb-5 justify-content-center">
-          <div class="col-md-7 text-center">
-            <div class="block-heading-1">
-              <h2 class="text-black text-uppercase">PROJECTS</h2>
-              <p>When we began, our focus was simply on preserving and celebrating the beauty of our cultural roots. What started as a small effort to promote cultural awareness has grown into a movement that bridges tradition and technology.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row mb-5">
-
-          <div class="col-lg-6 mb-5">
-            <img src="img/orirunapp.png" alt="Image" class="img-fluid">
-          </div>
-          <div class="col-lg-5 ml-auto align-self-center">
-            <h3 class="text-black text-uppercase mb-4"><a href="https://orirun.com">WWW.ORIRUN.COM</a></h3>
-            <p class="mb-5">Through the Orirun Application and other community-centered initiatives, we continue to create platforms that preserve indigenous knowledge, support education, and promote cultural renewal. Each project we undertake reflects our commitment to reviving African heritage, empowering communities, and inspiring a new generation to stay connected to their origin — their Orirun.</p>
-            
-          </div>
-          
-        </div>
-
-        <div class="row mb-5">
-
-          <div class="col-lg-6 mb-5 order-lg-2">
-            <img src="img/medicine.png" alt="Image" class="img-fluid">
-          </div>
-          <div class="col-lg-5 mr-auto align-self-center order-lg-1">
-            <h3 class="text-black text-uppercase mb-4">African Traditional Medicine
-</h3>
-            <p class="mb-5">African Traditional Medicine is one of the oldest and most holistic systems of healing known to humanity. It is rooted in the belief that health is a balance between the body, mind, spirit, and the community. At Orirun Cultural Foundation, we honor and preserve this ancient wisdom by documenting traditional healing practices, supporting herbal knowledge transmission, and promoting research that bridges indigenous medicine with modern understanding. We believe that African Traditional Medicine is not just about curing illness — it is about restoring balance, respecting nature, and recognizing the sacred connection between humanity and the earth. Through our programs, we aim to educate, preserve, and inspire renewed trust in these time-tested practices while ensuring that the next generation carries this healing heritage forward with pride and responsibility.</p>
-
-            
-
-          </div>
-      </div>
-    </div>
-  </div>
-
-    <div class="site-section bg-light" id="contact-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 text-center mb-5">
-            <h2 class="text-black section-title text-uppercase">Contact Us</h2>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-lg-6 mb-5">
-            <form action="#" method="post">
-              <div class="form-group row">
-                <div class="col-md-6 mb-4 mb-lg-0">
-                  <input type="text" class="form-control" placeholder="First name">
-                </div>
-                <div class="col-md-6">
-                  <input type="text" class="form-control" placeholder="Last name">
-                </div>
-              </div>
-
-              <div class="form-group row">
-                <div class="col-md-12">
-                  <input type="text" class="form-control" placeholder="Email address">
-                </div>
-              </div>
-
-              <div class="form-group row">
-                <div class="col-md-12">
-                  <textarea name="" id="" class="form-control" placeholder="Write your message." cols="30" rows="10"></textarea>
-                </div>
-              </div>
-              <div class="form-group row">
-                <div class="col-md-6 ml-auto">
-                  <input type="submit" class="btn btn-block btn-primary text-white py-3 px-5" value="Send Message">
-                </div>
-              </div>
-            </form>
-          </div>
-          
-        </div>
-      </div>
-    </div>
-
-
-    <footer class="site-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="row">
-              <div class="col-md-8">
-                <h2 class="footer-heading mb-4">About Us</h2>
-                <p>We are dedicated to the preservation, promotion, and advancement of African ancestral wisdom, spirituality, and cultural heritage. Through innovative programs and technology, we connect communities with the richness of Africa's traditions while creating modern pathways for education, health, empowerment, and sustainable development.</p>
-              </div>
-              <div class="col-md-4 ml-auto">
-                <h2 class="footer-heading mb-4">Pages</h2>
-                <ul class="list-unstyled">
-                  <li><a href="#home-section" class="nav-link">Home</a></li>
-                  <li><a href="#about-section" class="nav-link">About</a></li>
-                  <li><a href="#discover-section" class="nav-link">Projects</a></li>
-                  <li><a href="#contact-section" class="nav-link">Contact</a></li>
-                </ul>
-              </div>
-              
-            </div>
-          </div>
-          <div class="col-md-4 ml-auto">
-
-            <div class="mb-5">
-              <div class="mb-5">
-                <h2 class="footer-heading mb-4">Contact Us</h2>
-                <p> <ul class="list-unstyled"> <li>Email us :
-info@orirun.org </li> <li>Call us :
-+2348101188554</li></ul></p>
-              </div>
-              <h2 class="footer-heading mb-4">Subscribe to Newsletter</h2>
-              <form action="#" method="post">
-                <div class="input-group mb-3">
-                  <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
-                  <div class="input-group-append">
-                    <button class="btn btn-primary text-white" type="button" id="button-addon2">Subscribe</button>
-                  </div>
-                </div>
-              </div>
-
-
-              <h2 class="footer-heading mb-4">Follow Us</h2>
-                <a href="https://wa.me/2348101188554" class="pl-3 pr-3"><span class="icon-whatsapp"></span></a>
-                <a href="https://www.facebook.com/orirunng" class="smoothscroll pl-0 pr-3"><span class="icon-facebook"></span></a>
-                <a href="https://twitter.com/orirun_ng" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
-                <a href="https://www.instagram.com/orirun_ng/" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-                <a href="https://www.youtube.com/@orirun" class="pl-3 pr-3"><span class="icon-youtube"></span></a>
-            </form>
-          </div>
-        </div>
-        <div class="row pt-5 mt-5 text-center">
-          <div class="col-md-12">
-            <div class="border-top pt-5">
-            <p>
-            
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> Orirun Cultural Foundation. All rights reserved. 
-           
-            </p>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </footer>
-
-  </div>
-
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/jquery-ui.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/jquery.sticky.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/aos.js"></script>
-
-  <script src="js/main.js"></script>
-    
-  </body>
+</body>
 </html>
